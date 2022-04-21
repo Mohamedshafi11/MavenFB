@@ -13,12 +13,14 @@ public class FaceBk {
 WebDriverManager.chromedriver().setup();
 WebDriver driver = new ChromeDriver();
 driver.get("https://en-gb.facebook.com/");
+driver.manage().window().maximize();
 WebElement emailTxt = driver.findElement(By.id("email"));
 emailTxt.sendKeys("9876543210");
 WebElement passTxt = driver.findElement(By.id("pass"));
 passTxt.sendKeys("1234567@ss");
 WebElement loginBtn = driver.findElement(By.name("login"));
 loginBtn.click();
+
 	}
 
 }
